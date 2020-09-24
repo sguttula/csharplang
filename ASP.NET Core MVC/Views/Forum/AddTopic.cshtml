@@ -1,0 +1,8 @@
+﻿@model int
+<h1 class="display-4">Create New Topic</h1>
+<form method="post" asp-controller="Forum" asp-action="AddTopic">
+    <b><font size="4">Topic Name:&nbsp;&nbsp;&nbsp;</font></b><input type="text" name="TopicName">
+    &nbsp;&nbsp;
+    <input type="hidden" name="ForumId" value="@Model"/>
+    <button><b><font color="black" size="4">Add</font></b></button>
+</form>

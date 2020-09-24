@@ -1,0 +1,20 @@
+﻿@model List<Forums>
+@{
+    ViewData["Title"] = "Main Menu";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Main Menu</h1>
+    <a class="nav-link text-dark" asp-area="" asp-controller="Forum" asp-action="Add"><b><font color="red" size="4">Create New Forum</font></b></a>
+
+    <table class="table">
+        <tbody>
+            @foreach (var forum in Model)
+            {
+            <tr>
+                <td><a href="Forum/ViewOne/@forum.Id">Forum - @forum.ForumName</a></td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

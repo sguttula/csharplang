@@ -1,0 +1,8 @@
+﻿@model int
+<h1 class="display-4">Create New Reply</h1>
+<form method="post" asp-controller="Forum" asp-action="AddReply">
+    <b><font size="4">Reply:&nbsp;&nbsp;&nbsp;</font></b><input type="text" name="Reply">
+    &nbsp;&nbsp;
+    <input type="hidden" name="TopicId" value="@Model" />
+    <button><b><font color="black" size="4">Add</font></b></button>
+</form>

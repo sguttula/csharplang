@@ -1,0 +1,19 @@
+﻿@model Forums
+@{
+    ViewData["Title"] = "Forum Page";
+}
+
+    <div class="text-center">
+        <h1 class="display-4">Forum Menu</h1>
+        <h2><b><font color="blue"><u>Forum - @Model.ForumName</u></font></b></h2>
+        <a class="nav-link text-dark" href="AddTopic/@Model.Id"><b><font color="red" size="4">Create New Topic</font></b></a>
+        <table class="table">
+            @foreach (var topic in Model.Topics)
+            {
+                <tr>
+                    <td><a href="ViewTwo/@topic.Id">Topic - @topic.TopicName (Posted on @topic.TopicTimeStamp)</a></td>
+                </tr>
+            }
+        </table>
+    </div>
+    <a class="nav-link text-dark" asp-controller="Forum" asp-action="BackToForums"><b><font color="red" size="3">Back to Main Menu</font></b></a>

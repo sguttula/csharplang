@@ -1,0 +1,19 @@
+﻿@model Topics
+@{
+    ViewData["Title"] = "Topic Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Topic Menu</h1>
+    <h2><b><font color="blue"><u>Topic - @Model.TopicName</u></font></b></h2>
+    <a class="nav-link text-dark" href="AddReply/@Model.Id"><b><font color="red" size="4">Create New Reply</font></b></a>
+    <table class="table">
+        @foreach (var reply in Model.Replies)
+        {
+        <tr>
+            <td>Reply:&nbsp;&nbsp;&nbsp;<b>@reply.Reply</b></td>
+        </tr>
+        }
+    </table>
+</div>
+<a href="BackToTopics/@Model.ForumId"><b><font color="red" size="3">Back to Forum Menu</font></b></a>

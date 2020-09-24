@@ -1,0 +1,32 @@
+@*
+@model List<Forums>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Main Menu</h1>
+    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Add"><b><font color="blue">Create New Forum</font></b></a>
+
+    <table class="table">
+        @*
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+        *@@*
+        <tbody>
+            @foreach (var forum in Model)
+            {
+                <tr>
+                    <td>@forum.Id</td>
+                    <td>@forum.ForumName</td>
+                    <td>@forum.ForumTimeStamp</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+*@
